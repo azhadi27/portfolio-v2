@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Azrulhadi | Marketing Tech Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Muhammad Azrulhadi Fikrullah",
+      "jobTitle": "Marketing Tech & Automation Specialist",
+      "knowsAbout": ["CRM", "Cybersecurity", "Google Analytics", "ActiveCampaign"]
+    }
+    </script>
+</head>
+<body class="bg-[#0a0f14] text-gray-200 selection:bg-emerald-500/30">
+    <section id="contact" class="py-20 px-6">
+        <form id="contactForm" class="max-w-md mx-auto bg-gray-900 p-8 rounded-3xl border border-gray-800">
+            <input type="hidden" name="utm_source" id="utm_source">
+            <input type="hidden" name="utm_medium" id="utm_medium">
+            <input type="hidden" name="utm_campaign" id="utm_campaign">
+            <input type="hidden" name="source_url" id="source_url">
+            
+            <h3 class="text-xl font-bold mb-6">Secure Inquiry</h3>
+            <input type="text" name="name" placeholder="Name" required class="w-full bg-black mb-4 p-3 rounded-lg border border-gray-800 outline-none focus:border-emerald-500">
+            <input type="email" name="email" placeholder="Email" required class="w-full bg-black mb-4 p-3 rounded-lg border border-gray-800 outline-none focus:border-emerald-500">
+            <textarea name="message" placeholder="Message" required class="w-full bg-black mb-4 p-3 rounded-lg border border-gray-800 outline-none focus:border-emerald-500"></textarea>
+            <button type="submit" id="submitBtn" class="w-full bg-emerald-600 py-3 rounded-xl font-bold">SEND SECURELY</button>
+            <p id="responseMsg" class="hidden text-center text-emerald-500 mt-4 text-xs font-mono">Transmission Successful.</p>
+        </form>
+    </section>
+
+    <div class="text-center pb-20">
+        <a href="tools/index.html" class="text-emerald-500 font-mono hover:underline italic">Access Engineering Tools Hub →</a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
