@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /portfolio-v2/  # Optional: Prevents indexing until testing is finished
+Allow: /
+Sitemap: https://azhadi27.github.io/portfolio/sitemap.xml
