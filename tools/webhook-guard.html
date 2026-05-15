@@ -2,12 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Webhook Guard | v2</title>
+    <title>Secure Webhook Guard | Azrul</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body class="bg-[#0a0f14] text-gray-200 p-12">
-    <a href="index.html" class="text-emerald-500">← Back to Tools</a>
+<body class="bg-gray-950 text-gray-200 p-6 md:p-12">
+    <div class="max-w-3xl mx-auto">
+        <a href="index.html" class="text-emerald-500 hover:text-emerald-400 font-mono text-sm mb-8 inline-block">← Back to Tools</a>
+        <div class="bg-gray-900 p-8 rounded-3xl border border-emerald-500/20 shadow-2xl">
+            <h1 class="text-2xl font-bold text-white font-mono mb-6">🛡️ Secure Webhook Guard</h1>
+            <div class="space-y-4 pt-8">
+                <input id="path" type="text" placeholder="Webhook Path" class="w-full bg-black border border-gray-800 p-3 rounded-lg outline-none focus:border-emerald-500">
+                <input id="ip" type="text" placeholder="Trusted IP (Optional)" class="w-full bg-black border border-gray-800 p-3 rounded-lg outline-none focus:border-emerald-500">
+                <button onclick="generateRule()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl">Generate WAF Rule</button>
+            </div>
+            <div id="resultBox" class="mt-8 hidden">
+                <div class="bg-black p-4 rounded-lg border border-gray-800"><code id="output" class="text-emerald-400 text-xs break-all"></code></div>
+            </div>
+        </div>
+    </div>
     <script src="../assets/js/main.js"></script>
+    <script>
+        function generateRule() {
+            const path = document.getElementById('path').value || '/webhook';
+            const ip = document.getElementById('ip').value;
+            let rule = `(http.request.uri.path contains "${path}")`;
+            if (ip) rule += ` and not (ip.src eq ${ip})`;
+            rule += ` and (cf.threat_score gt 10)`;
+            document.getElementById('output').innerText = rule;
+            document.getElementById('resultBox').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
