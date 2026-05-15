@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Azrulhadi | Marketing Tech Specialist</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Person",
-      "name": "Muhammad Azrulhadi Fikrullah",
-      "jobTitle": "Marketing Tech & Automation Specialist",
-      "knowsAbout": ["CRM", "Cybersecurity", "Google Analytics", "ActiveCampaign"]
-    }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammad Azrul | Marketing Tech & Cybersecurity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Portfolio of Muhammad Azrul - Marketing Technology, CRM Automation & Cybersecurity Projects">
 </head>
-<body class="bg-[#0a0f14] text-gray-200 selection:bg-emerald-500/30">
-    <section id="contact" class="py-20 px-6">
-        <form id="contactForm" class="max-w-md mx-auto bg-gray-900 p-8 rounded-3xl border border-gray-800">
-            <input type="hidden" name="utm_source" id="utm_source">
-            <input type="hidden" name="utm_medium" id="utm_medium">
-            <input type="hidden" name="utm_campaign" id="utm_campaign">
-            <input type="hidden" name="source_url" id="source_url">
-            
-            <h3 class="text-xl font-bold mb-6">Secure Inquiry</h3>
-            <input type="text" name="name" placeholder="Name" required class="w-full bg-black mb-4 p-3 rounded-lg border border-gray-800 outline-none focus:border-emerald-500">
-            <input type="email" name="email" placeholder="Email" required class="w-full bg-black mb-4 p-3 rounded-lg border border-gray-800 outline-none focus:border-emerald-500">
-            <textarea name="message" placeholder="Message" required class="w-full bg-black mb-4 p-3 rounded-lg border border-gray-800 outline-none focus:border-emerald-500"></textarea>
-            <button type="submit" id="submitBtn" class="w-full bg-emerald-600 py-3 rounded-xl font-bold">SEND SECURELY</button>
-            <p id="responseMsg" class="hidden text-center text-emerald-500 mt-4 text-xs font-mono">Transmission Successful.</p>
-        </form>
-    </section>
+<body class="bg-gray-950 text-white font-sans selection:bg-emerald-500/30">
 
-    <div class="text-center pb-20">
-        <a href="tools/index.html" class="text-emerald-500 font-mono hover:underline italic">Access Engineering Tools Hub →</a>
+  <section class="min-h-screen flex items-center justify-center px-6">
+    <div class="max-w-4xl text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">Muhammad Azrul</h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-6">Marketing Technology & CRM Specialist</p>
+      <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+        Building data-driven marketing systems, CRM automation workflows,
+        and cybersecurity projects focused on practical execution and scalability.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://www.linkedin.com/in/muhammad-azrulhadi-shahrul-ibnul-walid/" target="_blank" class="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition">LinkedIn</a>
+        <a href="tools/index.html" class="border border-gray-600 px-6 py-3 rounded-xl hover:bg-gray-800 transition text-emerald-400">Engineering Tools Hub →</a>
+      </div>
     </div>
+  </section>
 
-    <script src="assets/js/main.js"></script>
+  <section class="py-20 px-6 border-t border-gray-800">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8">About Me</h2>
+      <p class="text-gray-300 leading-8">
+        I specialize in CRM automation, email marketing workflows, and customer journey optimization.
+        Alongside marketing technology, I am also building hands-on cybersecurity skills through practical SOC and log analysis projects.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 px-6 border-t border-gray-800 bg-gray-900/20">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Secure Inquiry</h2>
+      <form id="contactForm" class="space-y-4">
+        <input type="hidden" name="utm_source" id="utm_source">
+        <input type="hidden" name="utm_medium" id="utm_medium">
+        <input type="hidden" name="utm_campaign" id="utm_campaign">
+        <input type="hidden" name="source_url" id="source_url">
+        <input type="text" name="name" placeholder="Name" required class="w-full bg-black border border-gray-800 p-3 rounded-lg focus:border-emerald-500 outline-none">
+        <input type="email" name="email" placeholder="Email" required class="w-full bg-black border border-gray-800 p-3 rounded-lg focus:border-emerald-500 outline-none">
+        <textarea name="message" placeholder="Message" rows="4" required class="w-full bg-black border border-gray-800 p-3 rounded-lg focus:border-emerald-500 outline-none"></textarea>
+        <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl transition uppercase tracking-widest text-xs">Execute Secure Send</button>
+        <p id="responseMsg" class="hidden text-center text-emerald-500 font-mono text-xs mt-4">DONE: Data transmitted successfully.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center border-t border-gray-800 text-gray-500 text-sm">
+    <p class="mb-4 font-mono">Created in - 2026</p>
+    <a href="https://www.linkedin.com/in/muhammad-azrulhadi-shahrul-ibnul-walid/" target="_blank" class="hover:text-emerald-500 transition">LinkedIn</a>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
