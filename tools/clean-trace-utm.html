@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clean-Trace UTM | Azrul</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-gray-200 p-6 md:p-12">
+    <div class="max-w-3xl mx-auto">
+        <a href="index.html" class="text-emerald-500 hover:text-emerald-400 font-mono text-sm mb-8 inline-block">← Back to Tools</a>
+        <div class="bg-gray-900 p-8 rounded-3xl border border-emerald-500/20 shadow-2xl">
+            <h1 class="text-2xl font-bold text-white font-mono mb-6">🔗 Clean-Trace UTM Builder</h1>
+            <div class="space-y-4 pt-8">
+                <input id="baseUrl" type="text" placeholder="URL" class="w-full bg-black border border-gray-800 p-3 rounded-lg outline-none focus:border-emerald-500">
+                <div class="grid grid-cols-3 gap-2">
+                    <input id="source" type="text" placeholder="Source" class="bg-black border border-gray-800 p-3 rounded-lg outline-none">
+                    <input id="medium" type="text" placeholder="Medium" class="bg-black border border-gray-800 p-3 rounded-lg outline-none">
+                    <input id="campaign" type="text" placeholder="Campaign" class="bg-black border border-gray-800 p-3 rounded-lg outline-none">
+                </div>
+                <button onclick="buildUTM()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl">Build Sanitized Link</button>
+            </div>
+            <div id="resultBox" class="mt-8 hidden">
+                <div class="bg-black p-4 rounded-lg border border-gray-800"><code id="output" class="text-emerald-400 text-xs break-all"></code></div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        function buildUTM() {
+            const base = document.getElementById('baseUrl').value;
+            const sanitize = (s) => s.toLowerCase().trim().replace(/[^a-z0-9]/g, "_");
+            if(!base) return;
+            const url = new URL(base);
+            url.searchParams.set('utm_source', sanitize(document.getElementById('source').value));
+            url.searchParams.set('utm_medium', sanitize(document.getElementById('medium').value));
+            url.searchParams.set('utm_campaign', sanitize(document.getElementById('campaign').value));
+            document.getElementById('output').innerText = url.toString();
+            document.getElementById('resultBox').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
