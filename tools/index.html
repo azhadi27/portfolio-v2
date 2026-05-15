@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Engineering Tools Hub | Muhammad Azrul</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white font-sans px-6 py-20">
+  <div class="max-w-4xl mx-auto">
+    <a href="../index.html" class="text-emerald-500 hover:text-emerald-400 font-mono text-sm mb-12 inline-block">← Return to Portfolio</a>
+    
+    <header class="mb-16">
+      <h1 class="text-4xl font-bold mb-4">Internal Engineering Tools</h1>
+      <p class="text-gray-400 text-lg">Specialized utilities for marketing data integrity and security.</p>
+    </header>
+
+    <div class="grid gap-6 mb-20">
+      <a href="webhook-guard.html" class="group bg-gray-900/50 border border-gray-800 p-8 rounded-3xl hover:border-emerald-500/50 transition flex items-start gap-6">
+        <div class="bg-emerald-500/10 p-4 rounded-2xl group-hover:scale-110 transition">🛡️</div>
+        <div><h2 class="text-xl font-bold mb-2">Secure Webhook Guard</h2><p class="text-gray-400 text-sm">Cloudflare WAF rule generator for integration protection.</p></div>
+      </a>
+      <a href="clean-trace-utm.html" class="group bg-gray-900/50 border border-gray-800 p-8 rounded-3xl hover:border-emerald-500/50 transition flex items-start gap-6">
+        <div class="bg-emerald-500/10 p-4 rounded-2xl group-hover:scale-110 transition">🔗</div>
+        <div><h2 class="text-xl font-bold mb-2">Clean-Trace UTM Builder</h2><p class="text-gray-400 text-sm">Sanitized attribution generator for 95% data accuracy.</p></div>
+      </a>
+    </div>
+
+    <div class="border-t border-gray-800 pt-20">
+      <h3 class="text-2xl font-bold mb-6 text-center text-white">Need a custom tool?</h3>
+      <form id="contactForm" class="max-w-xl mx-auto space-y-4">
+        <input type="hidden" name="utm_source" id="utm_source">
+        <input type="hidden" name="utm_medium" id="utm_medium">
+        <input type="hidden" name="utm_campaign" id="utm_campaign">
+        <input type="hidden" name="source_url" id="source_url">
+        <input type="text" name="name" placeholder="Name" required class="w-full bg-black border border-gray-800 p-3 rounded-lg focus:border-emerald-500 outline-none text-white">
+        <input type="email" name="email" placeholder="Email" required class="w-full bg-black border border-gray-800 p-3 rounded-lg focus:border-emerald-500 outline-none text-white">
+        <textarea name="message" placeholder="Describe the tool requirement..." rows="4" required class="w-full bg-black border border-gray-800 p-3 rounded-lg focus:border-emerald-500 outline-none text-white"></textarea>
+        <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl transition uppercase tracking-widest text-xs">Submit Request</button>
+        <p id="responseMsg" class="hidden text-center text-emerald-500 font-mono text-xs mt-4">DONE: Data transmitted successfully.</p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="py-10 text-center border-t border-gray-800 text-gray-500 text-sm mt-20">
+    <p class="mb-4 font-mono">Created in - 2026</p>
+    <a href="https://www.linkedin.com/in/muhammad-azrulhadi-shahrul-ibnul-walid/" target="_blank" class="hover:text-emerald-500 transition">LinkedIn</a>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
