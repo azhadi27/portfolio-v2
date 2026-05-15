@@ -1,0 +1,10 @@
+# Muhammad Azrulhadi Fikrullah - V2 Deployment
+Marketing Tech & Automation Specialist with Secure Infrastructure Focus.
+
+## Core Systems
+- Secure lead ingestion via serverless backend.
+- High-integrity attribution tracking (95% accuracy).
+- Cybersecurity validated (CompTIA SecurityX, PenTest+).
+
+## Testing Directory
+- Current active testing environment: /portfolio-v2/
